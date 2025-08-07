@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>输入测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .win {
+            color: green;
+        }
+        .lose {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>byd2025CTF夺旗赛</h1>
+    <input type="text" id="userInput" placeholder="请输入内容">
+    <button onclick="checkInput()">确定</button>
+    <div id="result"></div>
+</div>
+
+<script>
+    function checkInput() {
+        const userInput = document.getElementById('userInput').value;
+        const resultElement = document.getElementById('result');
+
+        if (userInput === 'byd2025') {
+            resultElement.textContent = 'you win';
+            resultElement.className = 'win';
+        } else {
+            resultElement.textContent = 'you loser';
+            resultElement.className = 'lose';
+        }
+    }
+</script>
+</body>
+</html>
